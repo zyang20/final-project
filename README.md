@@ -56,13 +56,14 @@ git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com
 ```
 
-To avoid doing this every time you use Binder, include your username and email in the [git_setup.sh](git_setup.sh) file.
+To avoid doing this every time you use Binder, include your username and email in the [git_setup.sh](git_setup.sh) file, which will be run via [postBuild](postBuild) immediately after building the Binder instance.
 
-Every time you need to update your remote repo, run the following commands:
+
+Every time you need to update the version of the [final-project.ipynb](final-project.ipynb) in your remote repo, run the following commands:
 
 ```sh
 git add final-project.ipynb
-git commit -m "commit message"
+git commit -m "Update final-project.ipynb"
 git push
 ```
 
