@@ -22,9 +22,11 @@ cd final-project
 jupyter lab
 ```
 
-# Required packages
+## Required packages
 
 The packages used to run the code in the Binder instances are listed in [requirements.txt](requirements.txt) (Note that some of these exact version numbers may not be available on your platform: you may have to tweak them for your own use).
+
+Edit the [requirements.txt](requirements.txt) file to meet the requirements of your project.
 
 To install the requirements using [pip](http://conda.pydata.org), run the following at the command-line:
 
@@ -46,6 +48,23 @@ $ conda create -n final-project python=3.6 --file requirements.txt
 
 You can read more about using conda environments in the [Managing Environments](http://conda.pydata.org/docs/using/envs.html) section of the conda documentation.
 
+## Git version control
+To use git in a Binder instance, you have to set up your username and email as below:
+
+```sh
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+```
+
+To avoid doing this every time you use Binder, include your username and email in the [git_setup.sh](git_setup.sh) file.
+
+Every time you need to update your remote repo, run the following commands:
+
+```sh
+git add final-project.ipynb
+git commit -m "commit message"
+git push
+```
 
 ## License
 
