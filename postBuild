@@ -2,4 +2,5 @@
 
 jupyter labextension install @jupyterlab/git
 jupyter serverextension enable --py jupyterlab_git
-./git_setup.sh
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
